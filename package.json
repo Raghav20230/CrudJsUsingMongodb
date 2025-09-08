@@ -1,0 +1,29 @@
+{
+  "name": "crudjs",
+  "version": "1.0.0",
+  "description": "learning nodejs and express js with mongodb ",
+  "homepage": "https://github.com/Raghav20230/CrudJsUsingMongodb#readme",
+  "bugs": {
+    "url": "https://github.com/Raghav20230/CrudJsUsingMongodb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raghav20230/CrudJsUsingMongodb.git"
+  },
+  "license": "ISC",
+  "author": "RaghavSingh",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.0"
+  },
+  "devDependencies": {
+    "g": "^2.0.1",
+    "nodemon": "^3.1.10"
+  }
+}
