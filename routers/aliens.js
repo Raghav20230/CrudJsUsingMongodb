@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();  
-const Alien = require('../models/alien')
+const Alien = require('../models/alien')//"Alien collection ke liye banaya gaya model import karo taaki database ke saath CRUD operations kar sako."
 
-router.get('/', async(req, res) => {
+router.get('/', async(req, res) => {  //Ye route define karta hai:
  try {
-  const aliens =await Alien.find()
-  res.json(aliens)
+//async → function asynchronous hai
+//await → Promise complete hone tak wait karo
+//Ye code ko clean aur easy to read banata hai vs callbacks
+  const aliens =await Alien.find()//Ye Mongoose ki query hai jo MongoDB ke andar aliens collection ka saara data nikal kar laati hai.
+  //await isliye use kiya, kyunki ye asynchronous operation hai (database call me time lagta hai).
+  res.json(aliens)//Client ko JSON format me data bhej diya jata hai (API response)
  } catch (err) {
   req.send('ERROR '+err)
  } 
